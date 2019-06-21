@@ -230,6 +230,7 @@ end
   value_to_return = ""
   team1Points = 0 
   team2Points = 0
+  allPoints = []
   hash = game_hash
   game_hash.each do |sides,teams|
     teams[:players].each do |player,data|
