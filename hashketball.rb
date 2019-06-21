@@ -130,7 +130,7 @@ end
 end
 
 
- def shoe_size selected_player
+ def shoe_size(selected_player)
   value_to_return = 0
   hash = game_hash
   game_hash.each do |sides,teams|
