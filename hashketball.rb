@@ -145,14 +145,14 @@ end
 
 
  def team_colors team
-    colors = []
-    hash = game_hash
-    hash.each do |sides,teams|
-        if teams[:team_name] == team
-            colors = teams[:colors]
-        end
+  colors = []
+  hash = game_hash
+  hash.each do |sides,teams|
+    if teams[:team_name] == team
+      colors = teams[:colors]
     end
-    colors
+  end
+  colors
 end
 
 
