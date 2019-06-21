@@ -209,3 +209,19 @@ end
   value_to_return
 end
 
+
+ def most_points_scored 
+  value_to_return = 0
+  points_scored = 0
+  hash = game_hash
+  game_hash.each do |sides,teams|
+    teams[:players].each do |player,data|
+      if data[:points] > points_scored
+        points_scored = data[:points]
+        value_to_return = points_scored
+      end
+    end
+  end
+  value_to_return
+end
+
