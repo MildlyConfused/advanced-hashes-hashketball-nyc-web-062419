@@ -196,7 +196,7 @@ end
 end
 
 
- def player_stats selection
+ def player_stats(selection)
   value_to_return = 0
   hash = game_hash
   game_hash.each do |sides,teams|
