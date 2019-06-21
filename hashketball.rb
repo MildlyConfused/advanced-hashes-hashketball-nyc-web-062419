@@ -225,3 +225,19 @@ end
   value_to_return
 end
 
+
+ def player_with_longest_name
+  value_to_return = 0
+  nameLen = 0
+  hash = game_hash
+  game_hash.each do |sides,teams|
+    teams[:players].each do |player,data|
+      if player.to_s.length > nameLen
+        nameLen = player.to_s.length
+        value_to_return = player
+      end
+    end
+  end
+  value_to_return
+end
+
