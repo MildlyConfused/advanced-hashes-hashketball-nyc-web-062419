@@ -226,6 +226,23 @@ end
 end
 
 
+ def winning_team 
+  value_to_return = ""
+  shoe_size = 0
+  hash = game_hash
+  game_hash.each do |sides,teams|
+    teams[:players].each do |player,data|
+      if data[:shoe] > shoe_size 
+        shoe_size = data[:shoe]
+        value_to_return = data[:rebounds]
+      end
+    end
+  end
+  value_to_return
+end
+
+
+
  def player_with_longest_name
   value_to_return = 0
   nameLen = 0
@@ -240,4 +257,7 @@ end
   end
   value_to_return
 end
+
+
+
 
