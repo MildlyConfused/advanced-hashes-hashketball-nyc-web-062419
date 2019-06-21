@@ -235,7 +235,6 @@ end
     teams[:players].each do |player,data|
       team1Points += data[:points] 
         value_to_return = team1Points
-      
     end
   end
   value_to_return
