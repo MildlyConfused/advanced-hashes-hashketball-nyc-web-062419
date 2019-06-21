@@ -252,7 +252,7 @@ describe 'bonus' do
 
   describe '#most_points_scored' do
 
-    xit 'returns Ben Gordon' do
+    it 'returns Ben Gordon' do
       expect(most_points_scored).to eq("Ben Gordon")
     end
 
@@ -260,7 +260,7 @@ describe 'bonus' do
 
   describe '#winning_team' do
 
-    xit 'returns the Brooklyn Nets' do
+    it 'returns the Brooklyn Nets' do
       expect(winning_team).to eq("Brooklyn Nets")
     end
 
@@ -268,7 +268,7 @@ describe 'bonus' do
 
   describe '#player_with_longest_name' do
 
-    xit 'returns Bismack Biyombo' do
+    it 'returns Bismack Biyombo' do
       expect(player_with_longest_name).to eq("Bismack Biyombo")
     end
 
