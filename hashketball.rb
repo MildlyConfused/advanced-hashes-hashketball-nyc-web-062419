@@ -261,7 +261,7 @@ end
   value_to_return
 end
 
- def player_with_longest_name
+ def 
   value_to_return = 0
   nameLen = 0
   hash = game_hash
