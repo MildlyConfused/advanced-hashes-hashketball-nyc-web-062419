@@ -226,6 +226,22 @@ end
 end
 
 
+ def most_steals 
+  value_to_return = 0
+  steals = 0
+  hash = game_hash
+  game_hash.each do |sides,teams|
+    teams[:players].each do |player,data|
+      if data[:steals] > steals
+        steals = data[:steals]
+        value_to_return = player
+      end
+    end
+  end
+  value_to_return
+end
+
+
  def winning_team 
   value_to_return = ""
   allPoints = []
@@ -261,19 +277,9 @@ end
   value_to_return
 end
 
- def long_name_steals_a_ton?
-  value_to_return = 0
-  longestName = player_with_longest_name
-  mostSteals = 0
-  hash = game_hash
-  game_hash.each do |sides,teams|
-    teams[:players].each do |player,data|
-      if data[:steals] > mostSteals
-        mostSteals = data[:steals]
-      end
-    end
-  end
-  value_to_return
+def long_name_steals_a_ton?
+  if player_with_longest_name == most_steals
+    return true 
 end
 
 
