@@ -218,7 +218,7 @@ end
     teams[:players].each do |player,data|
       if data[:points] > points_scored
         points_scored = data[:points]
-        value_to_return = data
+        value_to_return = data.key(points_scored)
       end
     end
   end
