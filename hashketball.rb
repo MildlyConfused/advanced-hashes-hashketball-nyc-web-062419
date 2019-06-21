@@ -228,11 +228,13 @@ end
 
  def winning_team 
   value_to_return = ""
-  shoe_size = 0
+  team1Points = 0 
+  team2Points = 0
   hash = game_hash
   game_hash.each do |sides,teams|
+    
     teams[:players].each do |player,data|
-      if data[:shoe] > shoe_size 
+      data[:points] > shoe_size 
         shoe_size = data[:shoe]
         value_to_return = data[:rebounds]
       end
