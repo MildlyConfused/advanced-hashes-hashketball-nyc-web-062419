@@ -261,7 +261,7 @@ end
   value_to_return
 end
 
- def 
+ def long_name_steals_a_ton?
   value_to_return = 0
   nameLen = 0
   hash = game_hash
