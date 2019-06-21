@@ -131,16 +131,16 @@ end
 
 
  def shoe_size selected_player
-    value_to_return = 0
-    hash = game_hash
-    game_hash.each do |sides,teams|
-        teams[:players].each do |player,data|
-            if player == selected_player
-                value_to_return += data[:shoe]
-            end
-        end
+  value_to_return = 0
+  hash = game_hash
+  game_hash.each do |sides,teams|
+    teams[:players].each do |player,data|
+      if player == selected_player
+        value_to_return += data[:shoe]
+      end
     end
-    value_to_return
+  end
+  value_to_return
 end
 
 
