@@ -111,24 +111,22 @@ def game_hash
                     :slam_dunks => 12
                 }
             }
-
-
          }
     }
 end
 
 
- def num_points_scored selected_player
-    points_to_return = 0
-    hash = game_hash
-    game_hash.each do |sides,teams|
-        teams[:players].each do |player,data|
-            if player == selected_player
-                points_to_return += data[:points]
-            end
-        end
+ def num_points_scored(selected_player)
+  points_to_return = 0
+  hash = game_hash
+  game_hash.each do |sides,teams|
+    teams[:players].each do |player,data|
+      if player == selected_player
+      points_to_return += data[:points]
+      end
     end
-    points_to_return
+  end
+  points_to_return
 end
 
 
