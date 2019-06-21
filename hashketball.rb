@@ -157,26 +157,26 @@ end
 
 
  def team_names 
-    teams_display = []
-    hash = game_hash
-    hash.each do |sides,teams|
-       teams_display << teams[:team_name] 
+  teams_display = []
+  hash = game_hash
+  hash.each do |sides,teams|
+    teams_display << teams[:team_name] 
     end
-    teams_display
+  teams_display
 end
 
 
  def player_numbers team
-    hash = game_hash
-    jersey_nums = []
-    hash.each do |sides,teams|
-        if teams[:team_name] == team
-            teams[:players].each  do |player,data|
-                jersey_nums << data[:number]
-            end
-        end
+  hash = game_hash
+  jersey_nums = []
+  hash.each do |sides,teams|
+    if teams[:team_name] == team
+      teams[:players].each  do |player,data|
+        jersey_nums << data[:number]
+      end
     end
-    jersey_nums
+  end
+  jersey_nums
 end
 
 
