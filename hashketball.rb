@@ -234,9 +234,8 @@ end
   game_hash.each do |sides,teams|
     teams[:players].each do |player,data|
       team1Points += data[:points] 
-        shoe_size = data[:shoe]
-        value_to_return = data[:rebounds]
-      end
+        value_to_return = team1Points
+      
     end
   end
   value_to_return
