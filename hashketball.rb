@@ -236,7 +236,6 @@ end
       teamPoints += data[:points] 
     end
     allPoints.push(teamPoints)
-    
   end
   if allPoints[0] > allPoints[1]
     value_to_return = "Brooklyn Nets"
