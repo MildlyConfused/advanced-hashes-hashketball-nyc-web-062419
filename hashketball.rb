@@ -228,15 +228,15 @@ end
 
  def winning_team 
   value_to_return = ""
-  team1Points = 0 
-  team2Points = 0
   allPoints = []
   hash = game_hash
   game_hash.each do |sides,teams|
+    teamPoints = 0
+
     teams[:players].each do |player,data|
-      team1Points += data[:points] 
-        value_to_return = team1Points
+      teamPoints += data[:points] 
     end
+    
   end
   value_to_return
 end
