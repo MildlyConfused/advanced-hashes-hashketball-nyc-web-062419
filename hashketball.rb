@@ -235,8 +235,10 @@ end
     teams[:players].each do |player,data|
       teamPoints += data[:points] 
     end
+    allPoints.push(teamPoints)
     
   end
+  value_to_return = allPoints
   value_to_return
 end
 
