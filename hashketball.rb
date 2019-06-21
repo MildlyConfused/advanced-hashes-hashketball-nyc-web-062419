@@ -241,7 +241,8 @@ end
   if allPoints[0] > allPoints[1]
     value_to_return = "Brooklyn Nets"
   else
-    value_to_return = ""
+    value_to_return = "Charlotte Hornets"
+  end
   value_to_return
 end
 
