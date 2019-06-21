@@ -232,7 +232,6 @@ end
   hash = game_hash
   game_hash.each do |sides,teams|
     teamPoints = 0
-
     teams[:players].each do |player,data|
       teamPoints += data[:points] 
     end
