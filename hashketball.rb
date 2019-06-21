@@ -144,7 +144,7 @@ end
 end
 
 
- def team_colors team
+ def team_colors(team)
   colors = []
   hash = game_hash
   hash.each do |sides,teams|
@@ -166,7 +166,7 @@ end
 end
 
 
- def player_numbers team
+ def player_numbers(team)
   hash = game_hash
   jersey_nums = []
   hash.each do |sides,teams|
@@ -181,31 +181,31 @@ end
 
 
  def big_shoe_rebounds 
-    value_to_return = 0
-    shoe_size = 0
-    hash = game_hash
-    game_hash.each do |sides,teams|
-        teams[:players].each do |player,data|
-            if data[:shoe] > shoe_size 
-                shoe_size = data[:shoe]
-                value_to_return = data[:rebounds]
-            end
-        end
+  value_to_return = 0
+  shoe_size = 0
+  hash = game_hash
+  game_hash.each do |sides,teams|
+    teams[:players].each do |player,data|
+      if data[:shoe] > shoe_size 
+        shoe_size = data[:shoe]
+        value_to_return = data[:rebounds]
+      end
     end
-    value_to_return
+  end
+  value_to_return
 end
 
 
  def player_stats selection
-    value_to_return = 0
-    hash = game_hash
-    game_hash.each do |sides,teams|
-        teams[:players].each do |player,data|
-            if selection == player
-                value_to_return = data
-            end
-        end
+  value_to_return = 0
+  hash = game_hash
+  game_hash.each do |sides,teams|
+    teams[:players].each do |player,data|
+      if selection == player
+        value_to_return = data
+      end
     end
-    value_to_return
+  end
+  value_to_return
 end
 
